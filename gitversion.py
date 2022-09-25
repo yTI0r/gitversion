@@ -14,9 +14,10 @@ def replace(line:str, new_vals:list):
     return line
 with open('version.h.inc') as fi, open('version.h','w') as fo:
     os.chdir('..')
+    last_git_tag=shell_data(['git','describe','--tags','--abbrev=0','--always'])     
     data=[
-        ('{git_tag}',shell_data(['git','describe','--tags'])),
-        ('{git_count}',shell_data(['git','rev-list','--all','--count'])),
+        ('{git_tag}',last_git_tag),
+        ('{git_count}',shell_data(['git','rev-list',f'{last_git_tag}..HEAD','--count'])),
         ('{git_hash}',shell_data(["git", "rev-parse", "--short", "HEAD"]))
     ]
     lines = fi.read()
