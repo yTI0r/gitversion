@@ -1,1 +1,1 @@
-python version.py 
+python gitversion.py 
