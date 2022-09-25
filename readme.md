@@ -2,9 +2,10 @@
 
 * Установка
 ```
-git submodule add <git@github > dir
+git submodule add https://github.com/yTI0r/gitversion.git
 ```
-Так же не забудьте добавить в .gitignore
-```
-vesion.h
-```
+* Использование
+
+После запуска скрипта gitversion.bat появится version.h
+
+В файле version.h.inc содержится шаблон version.h 
