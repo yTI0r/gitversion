@@ -6,6 +6,6 @@ git submodule add https://github.com/yTI0r/gitversion.git
 ```
 * Использование
 
-После запуска скрипта gitversion.bat появится version.h
+После запуска скрипта `gitversion.bat` появится `version.h`
 
-В файле version.h.inc содержится шаблон version.h 
+В файле `version.h.inc` содержится шаблон `version.h`
